@@ -9,22 +9,21 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("👍🏻viewDidLoad has run")
+       
         
     }
-    @IBAction func messageButtonPressed(_ sender: UIButton) {print("😎The message button was pressed!")
+    @IBAction func messageButtonPressed(_ sender: UIButton) {
         messageLabel.text = "You are Awesome!"
+        imageView.image = UIImage(named: "image0")
         messageLabel.textColor = UIColor.blue
         messageLabel.textAlignment = NSTextAlignment.left
     }
     
-    @IBAction func messageButtonPressed2(_ sender: UIButton) {messageLabel.text = "You are great!"
-        messageLabel.textColor = UIColor.systemRed
-        messageLabel.textAlignment = NSTextAlignment.right
-    }
+    
     
 }
 
