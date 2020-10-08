@@ -18,10 +18,18 @@ class ViewController: UIViewController {
         
     }
     @IBAction func messageButtonPressed(_ sender: UIButton) {
-        messageLabel.text = "You are Awesome!"
-        imageView.image = UIImage(named: "image0")
-        messageLabel.textColor = UIColor.blue
-        messageLabel.textAlignment = NSTextAlignment.left
+        let awesomeMessage = "You are Awesome!"
+        
+        if messageLabel.text == awesomeMessage {
+            messageLabel.text = "You are great!"
+            imageView.image = UIImage(named: "image1")  
+        }else if messageLabel.text == "You are great!"{
+            messageLabel.text = "You are da bomb"
+            imageView.image = UIImage(named:  "image2")
+        }else {
+            messageLabel.text = awesomeMessage
+            imageView.image = UIImage(named:  "image0")
+        }
     }
     
     
